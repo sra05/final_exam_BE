@@ -1,0 +1,44 @@
+{
+    "data": [
+        {
+            "movie_title": "RRR",
+            "release_data": "24 March 2022",
+            "music_director": "M. M. Keeravani",
+            "producer": "D. V. V. Danayya",
+            "Genre": "Action/War",
+            "movie_poster": "https://upload.wikimedia.org/wikipedia/en/d/d7/RRR_Poster.jpg"
+        },
+        {
+            "movie_title": "Baahubali: The Beginning",
+            "release_data": "10 July 2015",
+            "music_director": "M. M. Keeravani",
+            "producer": "Shobu Yarlagadda, Prasad Devineni",
+            "Genre": "Action/War",
+            "movie_poster": "https://upload.wikimedia.org/wikipedia/en/5/5f/Baahubali_The_Beginning_poster.jpg"
+        },
+        {
+            "movie_title": "Baahubali 2: The Conclusion",
+            "release_data": "28 April 2017",
+            "music_director": "M. M. Keeravani",
+            "producer": "Shobu Yarlagadda, Prasad Devineni",
+            "Genre": "Action/Adventure",
+            "movie_poster": "https://upload.wikimedia.org/wikipedia/en/9/93/Baahubali_2_The_Conclusion_poster.jpg"
+        },
+        {
+            "movie_title": "Eega",
+            "release_data": "6 July 2012",
+            "music_director": "M. M. Keeravani",
+            "producer": "Sai Korrapati",
+            "Genre": "Action/Fantasy",
+            "movie_poster": "https://upload.wikimedia.org/wikipedia/en/0/0c/Eega-poster.jpg"
+        },
+        {
+            "movie_title": "Magadheera",
+            "release_data": "30 July 2009",
+            "music_director": "M. M. Keeravani",
+            "producer": "Allu Aravind, B. V. S. N. Prasad",
+            "Genre": "Action/Romance",
+            "movie_poster": "https://upload.wikimedia.org/wikipedia/en/c/ce/Magadheera_Poster.jpg"
+        }
+    ]
+}

@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <script src="https://kit.fontawesome.com/2e73ce8a4e.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Lobster&family=Satisfy&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Portfolio</title>
+    <style>
+        :root{
+    --main-radius: 5px;
+    --main-padding: 2px;
+    --pink: #F7F0F9;
+    --purple: #DAD7EA;
+    --blue: #C9E0F8;
+    --yellow: #FFFDD6;
+}
+body{
+    color: black;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+hr{
+    border: none;
+    border-top: 1px solid #A49393; 
+    margin: 0px;
+}
+#hrabout{
+    border: none;
+    border-top: 1px solid #A49393; 
+    margin: 0px;
+}
+#hrprojects{
+        height: 2px;
+        background-color: #ccc;
+        border: none;
+        margin: 20px 0;
+}
+#navhr{
+    border: none;
+    border-top: 1px solid #A49393; 
+    margin: 11px;
+}
+.tophr{
+    background-color: var(--purple);
+}
+p.heading{
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+}
+.matter{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 19px;
+}
+.container{
+    background-color: aliceblue;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1em;
+    display: grid;
+    height: 150vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 0.3fr 3fr;
+    grid-template-areas: 
+    "navbar navbar navbar"
+    "about about about"
+    "education education education"
+    "projects projects projects"
+    "experience experience experience"
+    "blogs blogs blogs"
+    "blogs blogs blogs"
+    "contact contact contact"
+    "phone rule icons"
+    ;
+
+    grid-gap: 0.5rem;
+
+}
+.about,.education,.projects,.experience,.blogs,.contact {
+    border-radius: var(--main-radius);
+    padding: var(--main-padding);
+}
+.navbar{
+    background-color: var(--purple);
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    border-radius: var(--main-radius);
+    padding:var(--main-padding) ;
+    grid-area: navbar;
+    display: inline-block;
+    padding-top: 13px;
+    height: 49px;
+    width: 1499px;
+    overflow: hidden;
+}
+.navbar a.active{
+    background-color: var(--purple);
+    color: white;
+}
+.about{
+    background-color: var(--purple);
+    border-radius: var(--main-radius);
+    padding:var(--main-padding);
+    grid-area: about;
+    display: inline-block;
+    margin-top: -11px;
+    height: 500px;
+}
+#name{
+    font-family: 'Satisfy', cursive;
+    font-size: 26px;
+}
+#photo{
+    height: 313px;
+    width: 350px;
+    background-color: aliceblue;
+    display: inline-block;
+    margin-left: 35px;
+    border-radius: 20px;
+}
+#desc{
+    width: 70%;
+    margin-left: 25px;
+    margin-top: 75px;
+    float: right;
+    margin-bottom: 15px;
+}
+.education{
+    background-color: aliceblue;
+    border-radius: var(--main-radius);
+    padding:var(--main-padding) ;
+    margin-bottom: -9px;
+    grid-area: education;
+    margin-top: -25px;
+}
+.project-containers{
+    display: inline-block;
+    padding-right: 18px;
+}
+.project123{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 19px;
+    margin-left: 9px;
+    padding: 10px;
+
+}
+.projects{
+    background-color: var(--pink);
+    border-radius: var(--main-radius);
+    padding:var(--main-padding) ;
+    grid-area: projects;
+    padding-bottom: 23px;
+    padding-left: 45px;
+    height: 320px;
+    margin-bottom: -7px;
+    margin-top: -20px;
+
+}
+#subp{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 15px;
+}
+#project1{
+    background-color: var(--blue);
+    border-radius: 20px;
+    padding:var(--main-padding) ;
+    grid-area: projects; 
+    width: 239px;
+    height: 239px;
+    display: inline-block;
+    margin-right: 329px;
+    vertical-align: top;
+    
+}
+#project2{
+    background-color: var(--blue);
+    border-radius: 20px;
+    padding:var(--main-padding) ;
+    grid-area: projects;
+    width: 239px;
+    height: 239px;
+    display: inline-block;
+    margin-right: 295px;
+    vertical-align: top;
+}
+#project3{
+    background-color: var(--blue);
+    border-radius: 20px;
+    padding:var(--main-padding) ;
+    grid-area: projects;
+    width: 239px;
+    height: 239px;
+    display: inline-block;
+    margin-right: 9px;
+    vertical-align: top;
+}
+.experience{
+    background-color: #ffffff;
+    /* border-radius: var(--main-radius);
+    padding:var(--main-padding) ; */
+    grid-area: experience;
+}
+.blogs12{
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 19px;
+    margin-left: 9px;
+    padding: 10px;
+}
+.blogs{
+    background-color: var(--yellow);
+    border-radius: var(--main-radius);
+    padding:var(--main-padding) ;
+    grid-area: blogs;
+    padding-bottom: 23px;
+    padding-left: 45px;
+    height: 367px;
+    margin-bottom: -8px;
+    margin-top: -10px;
+
+}
+#blog1{
+    border-radius: var(--main-radius);
+    padding:var(--main-padding) ;
+    grid-area: blogs; 
+    width: 239px;
+    height: 239px;
+    display: inline-block;
+    margin-right: 329px;
+    background-color: #CCFBFE;
+    vertical-align: top;
+    position: relative;
+    left: 300px;
+    border-radius: 20px;
+    
+}
+#blog2{
+    border-radius: var(--main-radius);
+    padding:var(--main-padding) ;
+    grid-area: blogs;
+    width: 239px;
+    height: 239px;
+    display: inline-block;
+    background-color: #CCFBFE;
+    margin-right: 329px;
+    vertical-align: top;
+    position: relative;
+    left: 300px;
+    border-radius: 20px;
+}
+.contact{
+    background-color: var(--purple);
+    border-radius: var(--main-radius);
+    padding:var(--main-padding) ;
+    font-family: 'Roboto Condensed', sans-serif;
+    grid-area: contact;
+    padding-top: 9px;
+    height: 314px;
+}
+#phone{
+    background-color: var(--purple);
+    margin-top: 52px;
+    margin-right: 382px;
+    margin-left: 138px;
+    float: left;
+    
+}
+#rule{
+    width: 1px;
+    height: 70%;
+    background-color: black; 
+    margin-left: auto;
+    margin-right: auto;
+    grid-area: rule;
+}
+#icons{
+    background-color: var(--purple);
+    height: 151px;
+    width: 373px;
+    float: right;
+    margin-left: 10px;
+    margin-right: 45px;
+    grid-area: icons;
+    margin-top: -146px;
+}
+.fa-brands, .fab {
+    font-weight: 400;
+    font-size: 38px;
+}
+.fa-twitter{
+    color: #1DA1F2;
+}
+.fa-linkedin-in{
+    color: #0072b1;
+}
+.fa-github{
+    color: #4078c0;
+}
+.fa-instagram{
+    color: #d62976;
+}
+@media screen and (max-width: 768px) {
+    .container {
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto auto auto auto auto auto auto auto;
+      grid-template-areas:
+        "navbar"
+        "about"
+        "education"
+        "projects"
+        "experience"
+        "blogs"
+        "blogs"
+        "contact"
+        "phone"
+        "icons";
+    }
+  
+    .navbar {
+        width: 555px;
+        height: 53px;
+    }
+  
+    #photo {
+        width: 25%;
+        height: 25%;
+    }
+  
+    #desc {
+      width: 100%; 
+      margin-left: 0; 
+      margin-top: 0; 
+      float: none;
+    }
+    .tophr{
+        display: hidden;
+    }
+    #hrprojects{
+        display: none;
+    }
+  
+    .project123 {
+      margin-left: 0; 
+    }
+  
+    .projects {
+      padding-left: 0;
+      margin-right: 0; 
+      margin-top: 0; 
+      height: auto; 
+    }
+  
+    #project1,
+    #project2,
+    #project3 {
+      width: 100%; 
+      margin-right: 0; 
+      padding-left: 18px;
+    }
+    .blogs {
+        padding-left: 0;
+        margin-right: 0; 
+        margin-top: 0; 
+        height: auto; 
+    }
+    #blog1,
+    #blog2 {
+        width: 100%;
+        margin-left: -300px;
+
+    }
+    .contact {
+        padding-left: 0;
+        margin-right: 0; 
+        margin-top: 0; 
+        height: auto; 
+    }
+    #contact,
+    #icons{
+        width: 34%;
+        height: 17%;
+        margin-right: 16px;
+        margin-top: -51px;
+
+    }
+    #phone{
+    margin-bottom: 0px;
+    height: 17%;
+    width: 33%;
+    margin-left: 51px;
+    }
+    #rule{
+        height: 57%;
+    }
+    .fa-brands, .fab {
+        font-weight: 400;
+        font-size: 30px;
+    }
+  }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="navbar">
+            <b>
+            <nav> <CENTER>
+                &nbsp; &nbsp; &nbsp; &nbsp;
+                <a href="#name">About &nbsp; &nbsp; &nbsp; &nbsp;</a> | &nbsp; &nbsp; &nbsp; &nbsp;
+                <a href="#edumove">Education &nbsp; &nbsp; &nbsp; &nbsp;</a> | &nbsp; &nbsp; &nbsp; &nbsp;
+                <a href="#projectmove">Projects &nbsp; &nbsp; &nbsp; &nbsp;</a> | &nbsp; &nbsp; &nbsp; &nbsp;
+                <a href="#expmove">Experience &nbsp; &nbsp; &nbsp; &nbsp;</a> | &nbsp; &nbsp; &nbsp; &nbsp;
+                <a href="#blogmove">Blogs &nbsp; &nbsp; &nbsp; &nbsp;</a> | &nbsp; &nbsp; &nbsp; &nbsp;
+                <a href="#sayhello">Contact Details &nbsp; &nbsp; &nbsp; &nbsp;</a> &nbsp; &nbsp; &nbsp; &nbsp;
+            </CENTER>
+            </nav>
+            </b>
+            <hr id="navhr">
+        </div>
+        <div class="about">
+            <div id="name">
+            <p><center><h1>Sravani Thoomuganti</h1></center></p>
+            </div>
+             <div id="photo">
+                
+             </div>
+             <div id="desc">
+                <h3>
+                <p class="heading">
+                <b>About</b>
+                </p>
+                </h3>
+                <div class="matter">
+                    My name is SRAVANI THOOMUGANTI, I am currently pursuing my masters in computer science at University of New Haven.
+                     I love drawing, cooking besides coding. Nice to see you here!
+
+                </div>
+             </div>
+             <hr id="hrprojects">
+            </div>
+        <div class="education" id="edumove">
+            <h3>
+                
+            <p class="heading">
+                <b> Education</b>
+            </p>
+            </h3>
+            <div class="matter">
+            <p>Masters in computer science       -      University of New Haven</p>
+            <p>Bachelors in computer science     -      Vaagdevi College of Engineering</p>
+            <p>Intermediate education            -      Sir C.V.Raman Jr. College</p>
+            </div>
+            <hr id="hrprojects">
+        </div>
+        
+        <div class="projects">
+            <div id="projectmove"></div>
+            <center>
+            <h3>
+            <p class="heading">
+                <b>Projects</b>
+            </p>
+            </h3>
+            </center>
+                <div class="project-containers">
+                    <div id="project1">
+                        <div class="project123">
+                            <p> Restaurant Management System</p>
+                            <div id="subp">
+                                <hr>
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-containers">                
+                    <div id="project2">
+                        <div class="project123">
+                            <p> Prediction Analysis of Fradulent Reviews</p>
+                            <hr>
+                            <div id="subp">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+                <div class="project-containers">                
+                    <div id="project3">
+                        <div class="project123">
+                            <p> Portfolio Creation for Web Dev</p>
+                            <hr>
+                            <div id="subp">
+                                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                            </div>    
+                        </div>
+                    </div>
+                </div>
+            <hr id="hrprojects">
+        </div>
+        <div class="experience">
+            <div id="expmove"></div>
+            <h3>
+            <p class="heading">
+                <b>Experience</b>
+            </p>
+            </h3>
+            
+            <div class="matter">
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry. 
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. 
+                It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.
+                It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
+            </div>
+            <hr>
+        </div>
+        
+        <div class="blogs">
+            <div id="blogmove"></div>
+            <center>
+                <p class="heading">
+                    <b>Blogs</b>
+                </p>
+            </center>
+            <div id="blog1">
+                <div class="blogs12">
+                    <p>
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+                    </p>
+                </div>
+            </div>
+            <div id="blog2">
+                <div class="blogs12">
+                    <p>
+                    There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour.
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="contact">
+            <div id="sayhello"></div>
+            <center>
+                <p class="heading">
+                    <b>Say Hello!</b>
+                </p>
+            </center>
+            <div id="phone">
+                <p>E-mail : abcd@gmail.com</p>
+                <p>Phone : 0000000000 </p>
+            </div>
+            <div id="rule"></div>
+            <div id="icons">
+                <a href="https://twitter.com/" target="_blank">
+                <i class="fa-brands fa-twitter"></i> &nbsp; &nbsp;
+                </a>
+                <a href="https://www.linkedin.com/in/sravani-thoomuganti-a564b5156" target="_blank">
+                <i class="fa-brands fa-linkedin-in"></i> &nbsp; &nbsp;
+                </a>
+                <a href="https://github.com/github" target="_blank">
+                <i class="fa-brands fa-github"></i> &nbsp; &nbsp;
+                </a>
+                <a href="https://instagram.com/yourbloggurl?igshid=YmMyMTA2M2Y=" target="_blank">
+                <i class="fa-brands fa-instagram"></i> &nbsp;
+                </a>
+            </div>
+                
+        </div>
+    </div>
+    
+</body>
+</html>
