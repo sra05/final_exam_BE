@@ -5,7 +5,18 @@ const { MongoClient } = require('mongodb');
 let responseData;
 let DB_NAME = "moviesdb";
 let COLLECTION_NAME = "ssr"
-const uri = `mongodb+srv://sravanithoomuganti:Sravani1997@cluster0.el4zimc.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`;
+async function main() {
+    const uri = `mongodb+srv://sravanithoomuganti:Sravani1997@cluster0.el4zimc.mongodb.net/${DB_NAME}?retryWrites=true&w=majority`;
+    const client = new MongoClient(uri);
+    try {
+        await client.connect();
+        responseData = await getAllDataFromMongo(client)
+    } finally {
+        await client.close();
+    }
+}
+
+main().catch(console.error);
 
 const server = http.createServer(async (req, res) => {
     if (req.url === '/') {
@@ -16,15 +27,7 @@ const server = http.createServer(async (req, res) => {
         });
     } else if (req.url === '/api') {
         res.writeHead(200, { 'Content-Type': 'application/json', 'Access-Control-Allow-Origin': '*' });
-        const client = new MongoClient(uri);
-    try {
-        await client.connect();
-        responseData = await getAllDataFromMongo(client)
         res.end(JSON.stringify(responseData[0]))
-    }
-    finally {
-        await client.close();
-    }
 
     } else {
         res.writeHead(404, { 'Content-Type': 'text/html' });
